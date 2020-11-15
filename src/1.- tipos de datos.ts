@@ -30,8 +30,8 @@ isUserPro = true
 
 //------------ String ------------
 // Explicito
-let username: string = 'luixaviles'
-username = 'Juan'
+let username: string = 'franco.fernandez'
+username = 'Franco'
 // username = true // Error
 
 // Template String
@@ -40,7 +40,7 @@ let userInfo: string
 userInfo = `
   User Info: 
   username: ${username}
-  firstName: ${username} Gonzalez
+  firstName: ${username} Fernandez
   phone: ${phone}
   isPro: ${isPro}
 `
