@@ -5,12 +5,12 @@ function showInfo(user) {
     console.log('userInfo', user.id, user.name);
     //return 'hola';
 }
-showInfo({ id: 1, name: 'fede' });
+showInfo({ id: 1, name: 'Franco' });
 /* Tipo Inferido */
 function showFormattedInfo(user) {
     console.log('userInfo', "\n        id: " + user.id + " \n        userName : " + user.name + "\n    ");
 }
-showFormattedInfo({ id: 1, name: 'fede' });
+showFormattedInfo({ id: 1, name: 'Franco' });
 /* Tipo Void como tipo de dato en variable */
 var unusable;
 //unusable = null;
