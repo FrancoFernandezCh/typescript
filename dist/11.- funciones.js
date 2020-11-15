@@ -23,3 +23,22 @@ var createPic = function (title, date, size) {
 };
 var picture = createPic('Platzi session', '2020-03-10', '100x100');
 console.log(picture);
+// Tipos de retorno con TypeScript
+function handleError(code, message) {
+    // Procesamiento de codigo, mensaje
+    if (message === "Error") {
+        throw new Error(message + ". Code error: " + code);
+    }
+    else {
+        return "An error has ocurred";
+    }
+}
+try {
+    var result = handleError(400, "Ok");
+    console.log(result);
+    result = handleError(400, "Error");
+    console.log(result);
+}
+catch (error) {
+    console.log(error.message);
+}
