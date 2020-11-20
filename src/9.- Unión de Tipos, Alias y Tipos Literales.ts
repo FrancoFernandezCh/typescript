@@ -4,7 +4,7 @@
 export {}
 
 // 10, '10'
-let idUser: number | string;
+/*let idUser: number | string;
 idUser = 10;
 idUser = '10';
 // Buscar username dado un ID
@@ -14,7 +14,7 @@ function getUsernameById(id: number | string) {
 }
 getUsernameById(20);
 getUsernameById('20');
-
+*/
 /* Alias de Tipos: El alias se puede aplicar tambien a un conjunto o combinacion de tipos */
 // alias de tipos: TS
 type IdUser = number | string;

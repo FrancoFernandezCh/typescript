@@ -1,3 +1,4 @@
+export {}
 /* void */
 /* Tipo explicito */
 
