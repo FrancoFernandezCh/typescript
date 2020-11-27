@@ -45,3 +45,5 @@ user = { id: 12, username: "flashparadox", isPro: true };
 console.log("user", user);
 user.username = "reverseflash";
 console.log("user", user);
+//user.id = 20; //error por que es solo readonly
+console.log("user", user);
