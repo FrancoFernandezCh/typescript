@@ -17,9 +17,9 @@ class Entity {
     get id() {
         return this._id;
     }
-    set id(id) {
+    /*set id(id:number){
         this._id = id;
-    }
+    }*/
     get title() {
         return this._title;
     }
@@ -46,6 +46,7 @@ class Picture extends Entity {
                 orientation: ${this._orientation}]`;
     }
 }
+Picture.photoOrientation = PhotoOrientation;
 class Album extends Entity {
     constructor(id, title) {
         super(id, title);
@@ -67,9 +68,11 @@ const picture = new Picture(1, "valparaiso", PhotoOrientation.Portrait);
 album.addPicture(picture);
 console.log("album", album);
 //accediendo a los miembros privados
-picture.id = 100; //private
+//picture.id = 100; //private
 picture.title = "Another title"; //private
 album.title = "Personal Activities"; //private
 console.log("album", album);
-const item = new Entity(1, "test title");
-console.log(item);
+//const item = new Entity(1, "test title"); //error por querer instanciar una clase abstracta
+//console.log(item)
+// prueba de la propiedad estatica
+console.log("PhotoOrientation", Picture.photoOrientation.Landscape);

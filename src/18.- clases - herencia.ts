@@ -8,9 +8,9 @@ enum PhotoOrientation {
 }
 
 //super clase
-class Entity{
+abstract class Entity{
      //propiedades
-     protected _id: number;
+     protected readonly _id: number;
      protected _title: string;
 
      constructor(id:number, title:string){
@@ -22,9 +22,9 @@ class Entity{
     get id(){
         return this._id;
     }
-    set id(id:number){
+    /*set id(id:number){
         this._id = id;
-    }
+    }*/
 
     get title(){
         return this._title;
@@ -36,6 +36,8 @@ class Entity{
 }
 
 class Picture extends Entity{
+    public static photoOrientation = PhotoOrientation;
+
     //propiedades
     _orientation: PhotoOrientation;
 
@@ -93,10 +95,13 @@ album.addPicture(picture)
 console.log("album",album)
 
 //accediendo a los miembros privados
-picture.id = 100; //private
+//picture.id = 100; //private
 picture.title = "Another title"; //private
 album.title = "Personal Activities";//private
 console.log("album", album)
 
-const item = new Entity(1, "test title");
-console.log(item)
+//const item = new Entity(1, "test title"); //error por querer instanciar una clase abstracta
+//console.log(item)
+
+// prueba de la propiedad estatica
+console.log("PhotoOrientation", Picture.photoOrientation.Landscape)
