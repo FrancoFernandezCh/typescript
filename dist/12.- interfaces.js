@@ -11,9 +11,9 @@ var PhotoOrientation;
     PhotoOrientation[PhotoOrientation["Panorama"] = 3] = "Panorama";
 })(PhotoOrientation || (PhotoOrientation = {}));
 function showPicture(picture) {
-    console.log("[title: " + picture.title + ", date: " + picture.date + ", orientation: " + picture.orientation + "]");
+    console.log(`[title: ${picture.title}, date: ${picture.date}, orientation: ${picture.orientation}]`);
 }
-var myPic = {
+let myPic = {
     title: "test title",
     date: "2020-03",
     orientation: PhotoOrientation.Landscape,
@@ -25,7 +25,7 @@ showPicture({
     orientation: PhotoOrientation.Portrait,
 });
 function generatePicture(config) {
-    var pic = { title: "default", date: "2020-03" };
+    const pic = { title: "default", date: "2020-03" };
     if (config.title) {
         pic.title = config.title;
     }
@@ -34,13 +34,13 @@ function generatePicture(config) {
     }
     return pic;
 }
-var picture = generatePicture({});
+let picture = generatePicture({});
 console.log("picture", picture);
 picture = generatePicture({ title: "Viaje a Valparaiso" });
 console.log("picture", picture);
 picture = generatePicture({ title: "Viaje a Valparaiso", date: "2018-01" });
 console.log("picture", picture);
-var user;
+let user;
 user = { id: 12, username: "flashparadox", isPro: true };
 console.log("user", user);
 user.username = "reverseflash";

@@ -12,7 +12,7 @@ var PhotoOrientation;
     PhotoOrientation[PhotoOrientation["Square"] = 2] = "Square";
     PhotoOrientation[PhotoOrientation["Panorama"] = 3] = "Panorama"; // 3
 })(PhotoOrientation || (PhotoOrientation = {}));
-var landscape = PhotoOrientation.Landscape;
+const landscape = PhotoOrientation.Landscape;
 console.log('landscape : ', landscape); // -> 0
 console.log('Landscape : ', PhotoOrientation[0]); // -> Landscape
 var PictureOrientation;
@@ -31,5 +31,5 @@ var Country;
     Country["EEUU"] = "usa";
     Country["Espa\u00F1a"] = "esp";
 })(Country || (Country = {}));
-var country = Country.Colombia;
+const country = Country.Colombia;
 console.log('country : ', country); // --> col

@@ -7,17 +7,17 @@ var PhotoOrientation;
     PhotoOrientation[PhotoOrientation["Square"] = 2] = "Square";
     PhotoOrientation[PhotoOrientation["Panorama"] = 3] = "Panorama";
 })(PhotoOrientation || (PhotoOrientation = {}));
-var album = {
+const album = {
     id: 1,
     title: "Vacaciones",
     description: "Viaje a la playa con la familia."
 };
-var picture = {
+const picture = {
     id: 1,
     title: "Family",
     orientation: PhotoOrientation.Landscape
 };
-var newPicture = {};
+let newPicture = {};
 newPicture.id = 2;
 newPicture.title = "Sun";
 console.log("album", album);

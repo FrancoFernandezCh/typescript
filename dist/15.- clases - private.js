@@ -35,7 +35,7 @@ const picture = new Picture(1, "valparaiso", PhotoOrientation.Portrait);
 album.addPicture(picture);
 console.log("album", album);
 //accediendo a los miembros publicos
-picture.id = 100; //public
-picture.title = "Another title"; //public
-album.title = "Personal Activities";
+//picture.id = 100; //public
+//picture.title = "Another title"; //public
+//album.title = "Personal Activities";
 console.log("album", album);

@@ -13,28 +13,28 @@ function createPicture(title, date, size) {
     console.log('create Picture using', title, date, size);
 }
 // Flat Array Function
-var createPic = function (title, date, size) {
+let createPic = (title, date, size) => {
     // return {
     //     title: title,
     //     date: date,
     //     size: size
     // };
-    return { title: title, date: date, size: size };
+    return { title, date, size };
 };
-var picture = createPic('Platzi session', '2020-03-10', '100x100');
+const picture = createPic('Platzi session', '2020-03-10', '100x100');
 console.log(picture);
 // Tipos de retorno con TypeScript
 function handleError(code, message) {
     // Procesamiento de codigo, mensaje
     if (message === "Error") {
-        throw new Error(message + ". Code error: " + code);
+        throw new Error(`${message}. Code error: ${code}`);
     }
     else {
         return "An error has ocurred";
     }
 }
 try {
-    var result = handleError(400, "Ok");
+    let result = handleError(400, "Ok");
     console.log(result);
     result = handleError(400, "Error");
     console.log(result);

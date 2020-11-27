@@ -1,18 +1,18 @@
 "use strict";
 //  ------------------ NULL ------------------
 // Explicita
-var nullVariable;
+let nullVariable;
 nullVariable = null;
 // nullVariable = 1; // --> Error
 // Inferido
-var otherVariable = null; // --> any
+let otherVariable = null; // --> any
 otherVariable = 'test';
 console.log('nullVariable : ', nullVariable);
 console.log('otherVariable : ', otherVariable);
 //  ----------------- UNDEFINED -----------------
-var undefinedVariable = undefined;
+let undefinedVariable = undefined;
 // undefinedVariable = 'test'; // --> Error
-var otherUndefined = undefined; // --> any
+let otherUndefined = undefined; // --> any
 otherUndefined = 1;
 console.log('undefinedVariable : ', undefinedVariable);
 console.log('otherUndefined : ', otherUndefined);
@@ -22,6 +22,6 @@ console.log('otherUndefined : ', otherUndefined);
  * Podemos ver las lineas del flag --strictNullChecks: para ver el numero de linea del error
  * Archivo tsconfig.json "strictNullChecks": true
  */
-var albumName;
+let albumName;
 // albumName = null;
 // albumName = undefined;

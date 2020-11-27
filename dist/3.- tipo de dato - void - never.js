@@ -9,11 +9,14 @@ function showInfo(user) {
 showInfo({ id: 1, name: 'Franco' });
 /* Tipo Inferido */
 function showFormattedInfo(user) {
-    console.log('userInfo', "\n        id: " + user.id + " \n        userName : " + user.name + "\n    ");
+    console.log('userInfo', `
+        id: ${user.id} 
+        userName : ${user.name}
+    `);
 }
 showFormattedInfo({ id: 1, name: 'Franco' });
 /* Tipo Void como tipo de dato en variable */
-var unusable;
+let unusable;
 //unusable = null;
 //unusable = undefined
 /* Tipo never */
@@ -21,7 +24,7 @@ var unusable;
 function handleError(code, message) {
     // Procesamiento del codigo 
     // Generamos mensaje
-    throw new Error(message + ". Code " + code);
+    throw new Error(`${message}. Code ${code}`);
 }
 try {
     handleError(404, 'NotFound');
