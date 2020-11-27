@@ -10,3 +10,5 @@ const picture = new picture_1.Picture(1, "Caleta Portales", "2020-03", photo_ori
 user.addAlbum(album);
 album.addPicture(picture);
 console.log("user", user);
+user.removeAlbum(album);
+console.log("user", user);
